@@ -1,0 +1,51 @@
+ALGORITHM algo_Checkpoint
+
+var 	str: string;
+ 	len : integer ; 
+ 	char_num: integer
+ 	words_num : integer;
+	char_num:=0 ;
+	words_num:=1;
+	v_num : integer;
+	i: integer :=0;
+Begin
+
+
+while (str[i]<>".")  DO
+
+// length of the sentence
+
+char_num:= char_num + 1 ;
+read ( str );
+write("The length of this sentence is " ,char_num);
+
+
+//number of words in the sentence 
+
+IF (str[i] := ' ')
+
+words_num := words_num+1
+
+end IF
+
+write("The number of words is " ,words_num)
+
+
+// number of vowels in the sentence. 
+
+
+
+IF 
+	(str[i]="a" OR str[i]:="e" OR
+	str[i]:="i" OR str[i]:="o" OR
+	str[i]:="y" OR str[i]:="u")
+i:=i+1
+end IF
+
+v_num:=i
+
+write (v_num)
+      
+End while
+
+End                                                                                   
