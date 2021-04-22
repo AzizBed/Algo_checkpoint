@@ -1,0 +1,34 @@
+PROCEDURE Insertion_sort(var H: ARRAY_OF INTEGER , Var nc:INTEGER)
+VAR
+    i,j,Key :INTEGER ;
+BEGIN
+    FOR i FROM 0 TO nc-1  DO
+    Key:=H[i] ;
+    j:=i-1 ;
+    WHILE (j>=0 And H[j]>Key) DO
+        H[j+1]:=H[j];
+        j:=j-1 ;
+    END_WHILE
+    H[j+1]=Key
+    END_FOR
+END
+
+
+ALGORITHM Insert_sorting
+VAR
+    nc,i,j : INTEGER;
+    H: ARRAY_OF INTEGER[nc]
+BEGIN
+    Write ("Type the number of cards in your Hands");
+    Read(nc);
+    Write ("Type the smallest card number in your hands");
+    read (H[0])
+    FOR i FROM 1 TO nc-1  DO
+        Write("Type any card number in hands");
+        read(H[i])
+    END_FOR
+
+    Write("Hands before Insertion_sort", H );
+    Insertion_sort(nc ,H );
+    write("Hands after Insertion_sort" ,H )
+END
